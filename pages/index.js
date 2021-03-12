@@ -14,7 +14,7 @@ export default function Home() {
           <Link href="" >
             <a className={styles.headbar_home}>Nthu+</a>
           </Link>
-          <div>
+          <div className={styles.headbar_gap}>
             {/* this is a gap */}
           </div>
           <Link href="">

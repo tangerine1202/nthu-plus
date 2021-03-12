@@ -1,23 +1,22 @@
 .base {
-  display: block;
 }
 
 .headbar {
   height: 4rem;
   border-bottom: #eaeaea 1px solid;
-  width: 100%;
   max-width: 1080px;
   margin: auto auto 2.5rem auto;
-  display: grid;
-  grid-template-columns: 15% 55% 10% 10% 10%;
-  grid-template-rows: 100%;
-  grid-template-areas: "home gap page1 page2 page3";
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
   font-family: "Courier New", Courier, monospace;
 }
 
 .headbar_home {
-  grid-area: home;
   display: flex;
+  flex: 1;
+  justify-self: flex-start;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
@@ -27,9 +26,14 @@
   box-shadow: 3px 2px rgba(240, 221, 184, 0.7);
 }
 
-.headbar_page1 {
-  grid-area: page1;
+.headbar_gap {
   display: flex;
+  flex: 4;
+}
+
+.headbar_page1 {
+  display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
@@ -39,8 +43,8 @@
 }
 
 .headbar_page2 {
-  grid-area: page2;
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
@@ -50,8 +54,8 @@
 }
 
 .headbar_page3 {
-  grid-area: page3;
   display: flex;
+  flex: 1;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
