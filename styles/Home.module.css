@@ -71,7 +71,7 @@
   margin: 0.5rem;
 }
 .search:hover {
-  background-color:rgb(146, 181, 146, 0.65); 
+  background-color:rgb(146, 181, 146, 0.65);
 }
 
 /*.college {
@@ -83,7 +83,7 @@
   margin: 0.5rem;
 }
 .college:hover {
-  background-color:rgb(146, 181, 146, 0.65); 
+  background-color:rgb(146, 181, 146, 0.65);
 }
 
 .department {
@@ -95,7 +95,7 @@
   margin: 0.5rem;
 }
 .department:hover {
-  background-color:rgb(146, 181, 146, 0.65); 
+  background-color:rgb(146, 181, 146, 0.65);
 }
 
 .unit {
@@ -107,7 +107,7 @@
   margin: 0.5rem;
 }
 .unit:hover {
-  background-color:rgb(146, 181, 146, 0.65); 
+  background-color:rgb(146, 181, 146, 0.65);
 }*/
 
 
@@ -127,8 +127,8 @@
   grid-template-columns: 1fr repeat(5, 2fr);
   grid-auto-flow: column;
   background-color: #cccccc;
-  gap: 0.1rem;
-  /*grid-template-areas: 
+  /* gap: 0.1rem; */
+  /*grid-template-areas:
     " . M  T  W  R  F"
     "C1 M1 T1 W1 R1 F1"
     "C2 M2 T2 W2 R2 F2"
@@ -145,7 +145,15 @@
   background-color: white;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  border-right: #cccccc solid 0.15rem;
+  border-bottom: #cccccc solid 0.15rem;
+}
+.class:nth-child(10n) {
+  border-bottom-style: none;
+}
+.class:nth-child(n+51) {
+  border-right-style: none;
 }
 .class:hover {
   background-color: oldlace;
