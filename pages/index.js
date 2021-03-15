@@ -2,59 +2,39 @@ import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
-function generateSchedule() {
+function createSchedule() {
   let weekday = ['M', 'T', 'W', 'R', 'F'];
   let class_num = 9;
-  let ret = [
-    <div style={{ 'grid-area': 'dummy', 'border-right': '#eaeaea 2px solid', 'border-bottom': '#eaeaea 2px solid' }}></div>
-  ];
+  let ret = [];
 
+  // dummy node
+  ret.push(
+    <div className={styles.class}></div>
+  )
   // generate class index
   for (let class_ = 1; class_ <= class_num; class_++) {
     let name = `C${class_}`;
-    let style = {
-      'grid-area': name,
-      'border-right': '#eaeaea 2px solid',
-      'border-bottom': '#eaeaea 2px solid',
-      'display': 'flex',
-      'justify-content': 'center',
-      'align-items': 'center'
-    }
     ret.push(
-      <div className={name} style={style}>{class_}</div>
+      <div className={styles.class}>
+        <i>{class_}</i>
+      </div>
     )
   }
 
   for (let day = 0; day < weekday.length; day++) {
     // generate day
-    let style = {
-      'grid-area': weekday[day],
-      'border-right': '#eaeaea 2px solid',
-      'border-bottom': '#eaeaea 2px solid',
-      'display': 'flex',
-      'justify-content': 'center',
-      'align-items': 'center'
-    }
     ret.push(
-      <div className={weekday[day]} style={style}>
-        {`${weekday[day]}.`}
+      <div className={styles.class}>
+        <i>{`${weekday[day]}.`}</i>
       </div>
     )
-
     // generate classes
-    let classes = [];
     for (let class_ = 1; class_ <= class_num; class_++) {
       let name = `${weekday[day]}${class_}`;
-      let style = {
-        'grid-area': name,
-        'border-right': '#eaeaea 2px solid',
-        'border-bottom': '#eaeaea 2px solid',
-        'display': 'flex',
-        'justify-content': 'center',
-        'align-items': 'center'
-      }
       ret.push(
-        <div className={name} style={style}>{name}</div>
+        <div className={styles.class}>
+          {name}
+        </div>
       )
     }
   }
@@ -89,19 +69,19 @@ export default function Home() {
         </nav>
         <main className={styles.main}>
           <div className={styles.left}>
-            <button className={styles.college}>
+            <button className={styles.search}>
               Search college
             </button>
-            <button className={styles.department}>
+            <button className={styles.search}>
               Search department
             </button>
-            <button className={styles.unit}>
+            <button className={styles.search}>
               Search unit
             </button>
           </div>
           <div className={styles.right}>
             <div className={styles.schedule}>
-              {generateSchedule()}
+              {createSchedule()}
             </div>
           </div>
         </main>
