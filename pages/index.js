@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+
+import Header from '../Components/header'
 
 function createSchedule() {
   let weekday = ['M', 'T', 'W', 'R', 'F'];
@@ -49,24 +50,8 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header></Header>
       <div className={styles.base}>
-        <nav className={styles.headbar}>
-          <Link href="" >
-            <a className={styles.headbar_home}>Nthu+</a>
-          </Link>
-          <div className={styles.headbar_gap}>
-            {/* this is a gap */}
-          </div>
-          <Link href="">
-            <a className={styles.headbar_page}>Page1</a>
-          </Link>
-          <Link href="">
-            <a className={styles.headbar_page}>Page2</a>
-          </Link>
-          <Link href="">
-            <a className={styles.headbar_page} > Page3</a>
-          </Link>
-        </nav>
         <main className={styles.main}>
           <div className={styles.left}>
             <button className={styles.search}>
