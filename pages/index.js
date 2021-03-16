@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Nthu+</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.base}>
